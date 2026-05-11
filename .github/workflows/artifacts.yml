@@ -1,0 +1,15 @@
+name: Upload artifact
+on:
+  push:
+jobs:
+ artifact:
+   runs-on: ubuntu-latest 
+   steps:
+     - uses: actions/checkout@v4 
+     - name: Create a file
+       run: echo "Hello dosto" > output.txt
+     - name: Upload the file 
+       uses: actions/upload-artifact@v4
+       with: 
+        name: my-file
+        path: output.txt
