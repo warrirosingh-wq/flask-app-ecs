@@ -13,5 +13,5 @@ jobs:
     - name: Installing dependencies
       run: pip install flask pytest
     - name: Running Test
-      run: pytest
+      run: pytest app.py
  
